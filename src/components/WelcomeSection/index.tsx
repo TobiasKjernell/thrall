@@ -1,3 +1,4 @@
+import './welcomeSection.scss'
 const WelcomeSection = () => {
   return (
     <main className="home">
