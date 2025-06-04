@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+.home {
+    font-family: "Cinzel Decorative", serif;
+    background-color: #161A20;
+    background-image: linear-gradient(rgba(221, 214, 214, 0.171)), url("/heropic-edit.png"); 
+    background-size: cover;
+    background-position: center;
+    padding-top: 250px;
+    padding-bottom: 700px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &__container {
+        text-align: center;
+        h1 {            
+            color: #8C1D1D;
+            font-size: clamp(48px, 10vw, 128px);  
+            font-weight: 400;
+            margin: 0;
+        }
+        h2 {
+            font-size: clamp(12px, 4vw, 32px); 
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-top: 1rem;
+        }
+         
+    }
+    
+}
