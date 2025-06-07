@@ -1,6 +1,6 @@
 "use client";
 import "./navbar.scss";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Logo from "../Logo";
 import LanguageDropdown from "../LanguageDropDownMenu";
@@ -10,6 +10,9 @@ import { navLinks } from "@/data/navbardata";
 
 
 const Navbar = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+  const toggleMenu = () => setOpenMenu(!openMenu);
+
   return (
     <nav className="navbar">
       <div className="navbar__logo">
@@ -24,10 +27,22 @@ const Navbar = () => {
       </div>
       <LanguageDropdown />
       <div className="navbar__burger">
-        <button>
+        <button onClick={toggleMenu}>
         <List size={60} weight="light" />
         </button>
       </div>
+      {openMenu && (
+        <div className={`navbar__mobile ${openMenu ? "open" : ""}`}>
+          {navLinks.map(({name, path}) =>(
+            <Link  key={path}
+              href={path}
+              className="navbar__links"
+              onClick={() => setOpenMenu(false)}>
+                {name}
+              </Link>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };
