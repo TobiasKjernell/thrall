@@ -52,6 +52,7 @@ const LanguageDropdown = () => {
           width={56}
           height={56}
           className="dropdownmenu__englishLogo"
+          priority
         />
         <span className='dropdownmenu__label'>{selected.label}</span>
       </div>
@@ -67,6 +68,7 @@ const LanguageDropdown = () => {
               width={56}
               height={56}
               className='dropdownmenu__swedishLogo'
+              priority
             
             />
             <span className='dropdownmenu__label'>{swedish.label}</span>

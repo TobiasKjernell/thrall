@@ -4,15 +4,10 @@ import React from "react";
 import Link from "next/link";
 import Logo from "../Logo";
 import LanguageDropdown from "../LanguageDropDownMenu";
-import { NavLink } from "@/types/type";
 import { List } from "@phosphor-icons/react/dist/ssr";
+import { navLinks } from "@/data/navbardata";
+ 
 
-
-const navLinks: NavLink[] = [
-  { name: "Thrall", path: "/thrall" },
-  { name: "About", path: "/about" },
-  { name: "Play", path: "/play" },
-];
 
 const Navbar = () => {
   return (
