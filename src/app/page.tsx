@@ -1,7 +1,9 @@
-export default function Home() {
+import Characters from "@/components/Characters";
+
+export default function HomePage() {
   return (
-    <div>
-      
-    </div>
+    <>
+    <Characters/>
+    </>
   );
 }
