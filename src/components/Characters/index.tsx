@@ -2,7 +2,7 @@
 import React from 'react';
 import './characters.scss';
 
-const imageSources = [
+const imageSources:string[] = [
   '/assets/umbran.png',
   '/assets/tauran.png',
   '/assets/oswen.png',
