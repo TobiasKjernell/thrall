@@ -1,0 +1,42 @@
+.footer {
+  padding: 2rem;
+  background-color: #111;
+  text-align: center;
+}
+
+.team-button {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button-image {
+  z-index: 0;
+}
+
+.button-text {
+  position: relative;
+  z-index: 1;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
+  
