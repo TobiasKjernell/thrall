@@ -1,9 +1,19 @@
 'use client';
 
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import './AboutTheGame.scss';
 
 export default function AboutTheGame() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section className="aboutGame">
       <div className="overlay">
@@ -14,9 +24,13 @@ export default function AboutTheGame() {
             YOU ARE THE FORGOTTEN GHOST OF A TYRANT KING,
             <br />
             <br />
-            YOU POSSESS THE LIVING 
+            YOU POSSESS THE LIVING
             <br />
-            TO RECLAIM FRAGMENTS OF YOUR FORMER SELF
+            {isMobile ? (
+              <>TO RECLAIM FRAGMENTS OF YOUR FORMER SELF</>
+            ) : (
+              <>TO RECLAIM FRAGMENTS OF YOUR FORMER SELF<br />WHETHER FLESH OR WITH YOUR CURSED ARMOR</>
+            )}
           </p>
 
           <div className="characterImage">
@@ -29,9 +43,26 @@ export default function AboutTheGame() {
             />
           </div>
 
-          <button className="playButton">
-            PLAY THE STORY
-          </button>
+          <div className="playButtonWrapper">
+            {isMobile ? (
+              <button className="playButton mobileButton">
+                PLAY THE STORY
+              </button>
+            ) : (
+              <>
+                <span className="playButtonText">PLAY THE STORY</span>
+                <button className="playButton">
+                  <Image
+                    src="/images/drop down button.png"
+                    alt="Play"
+                    width={30}
+                    height={30}
+                    priority
+                  />
+                </button>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </section>
