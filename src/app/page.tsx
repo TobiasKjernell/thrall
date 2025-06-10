@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div>
       <HomeWelcomeSection />
-      <Characters/>
       <AboutTheGame />
+      <Characters/>
     </div>
   )
 }
