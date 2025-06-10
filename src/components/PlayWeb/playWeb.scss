@@ -1,56 +1,63 @@
-.play-section {
-  padding: 4rem 2rem;
-  //background: linear-gradient(#1c1c1c, #111);
+.play {
   background-color: #121010;
-  text-align: center;
   color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  //font-family: 'Cinzel', serif;
 }
 
-.heading {
-  //font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
+.studio {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.wizard-img {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.title {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
-.play-grid {
-  display: grid;
-  //grid-template-columns: repeat(2, 1fr);
-  //grid-template-rows: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
-  }
+.game-img {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  display: block;
 }
 
-.play-card {
-  overflow: hidden;
-  border-radius: 10px;
-
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.02);
-    }
-  }
-}
-
-.play-text {
-  text-align: center;
-  font-size: 1.2rem;
+.play-btn {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
   font-weight: bold;
-  padding: 1rem 0;
+  text-transform: uppercase;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #ff4c4c;
+  }
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .play-btn {
+    font-size: 1.2rem;
+  }
+}  

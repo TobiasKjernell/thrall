@@ -2,42 +2,24 @@
 import React from 'react';
 import './playWeb.scss'
 
-const imageSources:string[] = [
-  '/assets/play1.png',
-  '/assets/play2.png',
-];
-
-const PlayWeb = () => {
+const Play = () => {
   return (
-    <section className="play-section">
-        <h2 className="play-title">ONE HELL OF A STUDIO</h2>
-        <div className="play-grid">
-        {imageSources.map((src, index) => (
-          <React.Fragment key={index}>  
-        <div className="play-card">
-          <img src={src} alt={`play ${index + 1}`} />   
-        </div>
-        {index === 0 && (
-            <div className="play-text">
-                <p>ENTER THE WORLD OF THRALL AND BECOME IT'S MASTER </p>
-            </div>
-        )}
+    <div className="play">
+      <p className="studio">ONE HELL OF A STUDIO</p>
 
-         {index === 1 && (
-              <div className="play-text">
-                <p>PLAY</p>
-              </div>
-            )}
+      <img src="/wizard.png" alt="Wizard Trio" className="wizard-img" />
 
-        </React.Fragment> 
+      <h1 className="title">
+        ENTER THE WORLD OF <br />
+        THRALL <br />
+        AND BEFORE IT’S MASTER
+      </h1>
 
-        
-      ))}
-      </div>
-    </section>
+      <img src="/game.png" alt="Gameplay" className="game-img" />
+
+      <button className="play-btn">PLAY THE GAME</button>
+    </div>
   );
 };
 
-export default PlayWeb;
-
-
+export default Play;
