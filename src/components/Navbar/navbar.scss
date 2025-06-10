@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 @import '../../styles/mixins';
 
 .navbar {
     @include centerflex;
     padding-top: 100px;
-    font-family: "Cinzel Decorative", serif;
+    font-family: $font_cinzel-decorative;
     font-weight: 400;
     font-size: 32px;
     color: #CCC5C5;
