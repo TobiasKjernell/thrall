@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import '../../styles/mixins';
+
+.navbar {
+    @include centerflex;
+    padding-top: 100px;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #CCC5C5;
+
+    @include mobile {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 50px;
+        padding-right: 50px;
+        }
+    &__logo {
+        @include mobile {
+            display: none;
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 133px;
+        
+        @include mobile {
+            display: none;
+        }
+    }
+    &__links {
+        color: #CCC5C5;
+        text-decoration: none;
+        &:hover {
+            color: white;
+        }
+    }
+    &__burger {
+        display: none;
+        @include mobile {
+            display: block;
+        }
+    }
+    button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+     }
+
+     &__mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        gap: 20px;
+        padding: 20px;
+        position: absolute;   
+        top: 24%;           
+        right: 0;
+        left: 0;
+        &.open {
+            transform: translateX(0);
+            pointer-events: auto;
+        }
+        @include mobile {
+            display: flex;
+        }
+    }
+}
