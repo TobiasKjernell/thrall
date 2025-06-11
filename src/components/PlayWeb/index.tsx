@@ -17,7 +17,8 @@ const Play = () => {
 
       <img src="/game.png" alt="Gameplay" className="game-img" />
 
-      <button className="play-btn">PLAY THE GAME</button>
+      <a href="#" className="play-btn">PLAY THE GAME</a>
+
     </div>
   );
 };
