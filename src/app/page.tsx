@@ -1,9 +1,11 @@
+import HomeWelcomeSection from "@/components/HomeWelcomeSection";
 import Characters from "@/components/Characters";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
-    <Characters/>
-    </>
+    <div>
+      <HomeWelcomeSection />
+      <Characters/>
+    </div>
   );
 }
