@@ -17,7 +17,7 @@ export default function Navbar() {
     setLangOpen(false)
   }
 
-  // Handle clicks outside of language and menu dropdowns
+  
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node
