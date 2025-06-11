@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import './AboutTheGame.scss';
 
@@ -45,21 +46,25 @@ export default function AboutTheGame() {
 
           <div className="playButtonWrapper">
             {isMobile ? (
-              <button className="playButton mobileButton">
-                PLAY THE STORY
-              </button>
+              <Link key="About" href="/about">
+                <button className="playButton mobileButton">
+                  PLAY THE STORY
+                </button>
+              </Link>
             ) : (
               <>
+              <Link key="About" href="/about">
                 <span className="playButtonText">PLAY THE STORY</span>
-                <button className="playButton">
-                  <Image
-                    src="/images/drop down button.png"
-                    alt="Play"
-                    width={30}
-                    height={30}
-                    priority
-                  />
-                </button>
+                  <button className="playButton">
+                    <Image
+                      src="/images/drop down button.png"
+                      alt="Play"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </button>
+                </Link>
               </>
             )}
           </div>
