@@ -1,0 +1,56 @@
+@import '../../styles/mixins';
+
+.about__storyline {
+    background-color: black;
+    padding: 32px 64px;
+    @include responsive-media-s {
+        padding: 32px 32px;
+
+    }
+
+    h2 {
+        font-size: 4rem;
+        color: #8C1D1DCC;
+        -webkit-text-stroke: 1px #DE8B8B;
+        text-align: center;
+    }
+
+    &-itemsContainer {
+        margin-top: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+        gap: 32px;
+        @include responsive-media-m {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__items {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            p {
+                color: #D5D0CA;
+                font-size: 24px;
+                text-transform: uppercase;
+                text-align: center;
+                @include responsive-media-m {
+                    font-size: 20px;
+                }
+                @include responsive-media-s {
+                    font-size: 16px;
+                }
+
+            }
+
+            img {
+                margin-top: 16px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
