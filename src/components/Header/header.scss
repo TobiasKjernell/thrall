@@ -1,0 +1,37 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.header {
+    // you can delet this backgound color and add what is required 
+    background-color: #161A20;
+    font-family: $font_cinzel-decorative;
+    &.home{
+        padding-bottom: 700px;
+        display: flex;
+        flex-direction: column-reverse;
+        background-image: linear-gradient(rgba(221, 214, 214, 0.171)), url("/heropic-edit.png"); 
+        background-size: cover;
+        background-position: center;
+    }
+    &__container {
+         text-align: center;
+        
+         h1 {            
+             color: #8C1D1D;
+             font-size: clamp(48px, 10vw, 128px);  
+             font-weight: 400;
+             margin: 0;
+             @include responsive-media-m  {
+                margin-top: 0;
+                padding-top: 0;
+           }
+        }
+        h2 {
+            font-size: clamp(12px, 4vw, 32px); 
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-top: 1rem;
+        }        
+    }
+ 
+}

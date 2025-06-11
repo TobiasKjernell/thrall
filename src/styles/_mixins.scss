@@ -1,0 +1,26 @@
+@import './variables';
+
+@mixin centerflex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin responsive-media-s {
+  @media (min-width:$breakpoint-responsive) {
+        @content;
+    }
+}
+
+@mixin responsive-media-m {
+    @media (max-width:$breakpoint-responsive) {
+    @content;
+  }
+}
