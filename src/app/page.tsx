@@ -1,11 +1,11 @@
 import HomeWelcomeSection from "@/components/HomeWelcomeSection";
-import StorylineSection from "@/components/StorylineSection";
+import Characters from "@/components/Characters";
 
 export default function Home() {
   return (
     <div>
       <HomeWelcomeSection />
-      <StorylineSection/>
+      <Characters/>
     </div>
   );
 }
