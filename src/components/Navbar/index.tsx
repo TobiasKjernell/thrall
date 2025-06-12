@@ -14,7 +14,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <Logo />
+          <Link href="/" onClick={() => setOpenMenu(false)}>
+            <Logo />
+          </Link>
       </div>
       <div className="navbar__container">
         {navLinks.map(({ name, path }) => (

@@ -1,4 +1,5 @@
 @import '../../styles/mixins';
+@import '../../styles/variables';
 
 .navbar {
     @include centerflex;
@@ -58,7 +59,7 @@
  
     &__mobile {
         position: absolute;
-        top: 22%;
+        top: 170;
         left: 0;
         right: 0;
         // You can change this backgound color for the responsive 
