@@ -3,7 +3,6 @@ import './conceptArea.scss'
 const ConceptArea = () => {
     return (
         <section className="concept">
-            <img src="bloodhand.png" className='bloodhand' alt="" />
             <h2 className="concept__title">Concept</h2>
             <p className="concept__text">For (16+) players who enjoy emergent mechanics and dynamic combat</p>
             <div className="concept__picture-grid">
