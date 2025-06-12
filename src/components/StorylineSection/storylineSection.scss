@@ -28,8 +28,10 @@
         }
 
         &__items {
+            margin-top: 2rem;
             display: flex;
             flex-direction: column;
+            gap: 12px;
             justify-content: space-between;
             align-items: center;
             p {
