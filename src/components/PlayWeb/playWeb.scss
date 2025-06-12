@@ -1,0 +1,74 @@
+.play {
+  background-color: #121010;
+  color: white;
+  text-align: center;
+  padding: 2rem 0rem;
+  height: 1200px;
+}
+
+.studio {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.wizard-img {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.game-img {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  display: block;
+}
+
+.play-btn {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    color: #ff4c4c;
+  }
+}
+
+/* Media Queries */
+  @media (max-width: 768px) {
+  .title {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .play {
+    height: 900px;
+  }
+
+  .play-btn {
+    font-size: 1.2rem;
+  }
+}  
+
+ @media (min-width: 768px) {
+  .play {
+    height: 1400px;
+  }
+ }
