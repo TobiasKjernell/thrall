@@ -1,0 +1,32 @@
+.dropdownmenu {
+    position: relative;
+     width: max-content;
+     cursor: pointer;
+    &__english {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        width: 56px;
+        img {
+            height: auto;
+            width: auto;
+        }           
+    }
+    &__swedishcontainer {
+        position: absolute;  
+        top: 100%;       
+        left: 0;
+        margin-top: 4px;  
+     }
+    &__swedish {
+        display: flex;
+        align-items: center;
+        cursor: pointer;  
+        img {
+          width: 75px !important;
+          height: 70px !important;
+ 
+       }   
+    }
+
+}

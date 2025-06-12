@@ -1,0 +1,47 @@
+.characters-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.heading {
+  //font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+.character-card {
+  overflow: hidden;
+  border-radius: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}

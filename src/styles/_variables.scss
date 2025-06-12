@@ -1,1 +1,43 @@
+// Fonts:
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 
+// Main Font: 
+$font_cinzel-decorative: "Cinzel Decorative", serif;
+
+
+//Font weight:
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+//Border:
+$border-radius-small: 10px;
+$border-radius-medium: 20px;
+$border-radius-large: 16px;
+
+//Spacing:
+$indent__base: 16px;
+$indent__s: $indent__base + 4;
+$indent__m: $indent__base * 1.5;
+$indent__l: $indent__base + 12;
+$indent__xl: $indent__base * 2;
+$indent__m: $indent__base + 20;
+$indent__xxl: $indent__base * 3;
+$indent__xxxl: $indent__base * 2.5;
+
+//Breakpoints:
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 400px;
+$breakpoint-responsive: 897px;
+
+// Header Colors:
+$color-silver: #CCC5C5;
+$color-swirl: #D5D0CA;
+
+//Main Colors:
+$color-old-brick: #8C1D1D;
+$color-white: #fff;
+$color-wild-sand: #F5F5F5;
+    //Button Background: 
+    $color-manatee: #95989D;
