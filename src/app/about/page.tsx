@@ -1,7 +1,13 @@
+import ConceptArea from "@/components/ConceptArea";
+import StorylineSection from "@/components/StorylineSection";
 const About = () => {
     return(
-        <>About Page</>
+        <>
+        <StorylineSection />
+        <ConceptArea />
+        </>
     )
 }
 
 export default About
+

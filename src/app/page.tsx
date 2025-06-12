@@ -9,7 +9,6 @@ export default function Home() {
       <HomeWelcomeSection />
       <AboutTheGame />
       <Characters/>
-      <StorylineSection/>
     </div>
   )
 }
