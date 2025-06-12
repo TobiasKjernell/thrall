@@ -1,7 +1,7 @@
 import HomeWelcomeSection from "@/components/HomeWelcomeSection";
 import Characters from "@/components/Characters";
-import StorylineSection from "@/components/StorylineSection";
 import AboutTheGame from "@/components/AboutTheGameSection";
+import StorylineSection from "@/components/StorylineSection";
 
 export default function Home() {
   return (
