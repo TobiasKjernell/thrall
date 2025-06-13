@@ -3,20 +3,21 @@
 
 .navbar {
     @include centerflex;
-    padding-top: 100px;
+    margin: 32px;
     font-family: "Cinzel Decorative", serif;
     font-weight: 400;
     font-size: 32px;
     color: #CCC5C5;
 
-    @include mobile {
+    @include tablet {
         display: flex;
         justify-content: space-between;
-        padding-left: 50px;
-        padding-right: 50px;
-        }
+    }
+    @include mobile {
+        margin: 32px 12px;
+    }
     &__logo {
-        @include mobile {
+        @include tablet {
             display: none;
         }
     }
@@ -25,7 +26,7 @@
         justify-content: space-between;
         gap: 133px;
         
-        @include mobile {
+        @include tablet {
             display: none;
         }
     }
@@ -38,17 +39,15 @@
     }
     &__burger {
         display: none;
-        @include mobile {
+        z-index: 1;
+        @include tablet {
             display: block;
         }
-    }
-    button {
-        background-color: transparent;
-        border: none;
-        color: white;
-        cursor: pointer;
-     }
 
+        svg {
+            cursor: pointer;
+        }
+    }
      &__mobile {
         display: flex;
         flex-direction: column;
@@ -58,14 +57,16 @@
         gap: 20px;
         padding: 20px;
         position: absolute;   
-        top: 24%;           
+        top: 0;           
         right: 0;
         left: 0;
+        background-color: #6F7276E0;
+        z-index: -1;
         &.open {
             transform: translateX(0);
             pointer-events: auto;
         }
-        @include mobile {
+        @include tablet {
             display: flex;
         }
     }

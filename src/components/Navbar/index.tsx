@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Logo from "../Logo";
 import LanguageDropdown from "../LanguageDropDownMenu";
-import { List } from "@phosphor-icons/react/dist/ssr";
+import { List, X } from "@phosphor-icons/react/dist/ssr";
 import { navLinks } from "@/data/navbardata";
  
 
@@ -27,12 +27,11 @@ const Navbar = () => {
       </div>
       <LanguageDropdown />
       <div className="navbar__burger">
-        <button onClick={toggleMenu}>
-        <List size={60} weight="light" />
-        </button>
-      </div>
+          {!openMenu ? <List onClick={toggleMenu} size={60} weight="light" /> : <X onClick={toggleMenu} size={60} weight="light" />  }
+      
       {openMenu && (
         <div className={`navbar__mobile ${openMenu ? "open" : ""}`}>
+          <Logo/>
           {navLinks.map(({name, path}) =>(
             <Link  key={path}
               href={path}
@@ -43,6 +42,7 @@ const Navbar = () => {
           ))}
         </div>
       )}
+      </div>
     </nav>
   );
 };
