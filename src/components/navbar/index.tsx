@@ -1,7 +1,8 @@
 'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import './navbar.scss'
 
 export default function Navbar() {
@@ -17,33 +18,39 @@ export default function Navbar() {
     setLangOpen(false)
   }
 
-  
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Node
-      if (langRef.current && !langRef.current.contains(target)) {
-        setLangOpen(false)
-      }
-      if (menuRef.current && !menuRef.current.contains(target)) {
-        setOpen(false)
-      }
+  const handleClickOutside = useCallback((event: MouseEvent) => {
+    const target = event.target as Node
+    if (langRef.current && !langRef.current.contains(target)) {
+      setLangOpen(false)
     }
+    if (menuRef.current && !menuRef.current.contains(target)) {
+      setOpen(false)
+    }
+  }, [])
 
+  useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [])
+  }, [handleClickOutside])
 
   return (
     <header className="header">
       <div className="top-bar">
-        {/* Language Dropdown */}
+        {/* Language Selector */}
         <div className="language-switcher" ref={langRef}>
-          <button className="flag-button" onClick={() => setLangOpen(!langOpen)}>
+          <button
+            className="flag-button"
+            onClick={() => setLangOpen(!langOpen)}
+            aria-haspopup="true"
+            aria-expanded={langOpen}
+            aria-label="Select language"
+          >
             <Image
               src={language === 'en' ? '/images/flag-uk.png' : '/images/flag-se.png'}
               alt={language}
               width={32}
               height={32}
+              priority
             />
           </button>
 
@@ -62,17 +69,31 @@ export default function Navbar() {
         </div>
 
         {/* Burger Button */}
-        <div className="burger" onClick={() => setOpen(!open)}>
+        <div
+          className="burger"
+          onClick={() => setOpen(!open)}
+          role="button"
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          tabIndex={0}
+          onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setOpen(!open)}
+        >
           <div></div>
           <div></div>
           <div></div>
         </div>
       </div>
 
-      {/* Burger Menu */}
+      {/* Dropdown Menu */}
       {open && (
         <nav className="menu" ref={menuRef}>
-          <Image src="/images/skull-logo.png" alt="Logo" width={80} height={80} className="skull" />
+          <Image
+            src="/images/skull-logo.png"
+            alt="Logo"
+            width={80}
+            height={80}
+            className="skull"
+          />
           <Link href="/" onClick={() => setOpen(false)}>THRALL</Link>
           <Link href="/about" onClick={() => setOpen(false)}>ABOUT</Link>
           <Link href="/play" onClick={() => setOpen(false)}>PLAY</Link>

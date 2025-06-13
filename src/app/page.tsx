@@ -1,13 +1,11 @@
-import Navbar from '@/components/navbar'
+import HomeWelcomeSection from "@/components/HomeWelcomeSection"
+import Navbar from "@/components/navbar"
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
+    <div>
       <Navbar />
-      <main style={{ paddingTop: '100px', textAlign: 'center' }}>
-        <h2>Welcome to Thrall</h2>
-        <p>This is the dark gothic game world...</p>
-      </main>
-    </>
+      <HomeWelcomeSection />
+    </div>
   )
 }

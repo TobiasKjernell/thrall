@@ -1,7 +1,10 @@
+html,
 body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #0c0c0c;
-  color: #eee;
-  font-family: 'Cinzel', serif;
 }
