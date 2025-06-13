@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&display=swap');
+
+.aboutGame {
+  background: url('/images/image 5.png') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+
+    h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      line-height: 2rem;
+      text-align: left;
+      margin-bottom: 2.5rem;
+      white-space: pre-line;
+    }
+
+    .characterImage {
+      margin-bottom: 2rem;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .playButtonWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+
+      .playButtonText {
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 2.5rem;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.363);
+        border: 1px solid #ee0707;
+        display: inline-flex;
+        align-items: center;
+        transition: background 0.3s, color 0.3s;
+        border-radius: 0.5rem;
+      }
+
+      .playButton {
+        padding: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
+        }
+      }
+
+      /* Mobile button styles */
+      .mobileButton {
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 2rem;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.363);
+        border: 1px solid #ee0707;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1.5rem;
+        cursor: pointer;
+        transition: background 0.3s, color 0.3s;
+
+        &:hover,
+        &:focus {
+          background: #ee0707;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .aboutGame {
+    .content {
+      padding: 1rem;
+
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: left;
+      }
+
+      .characterImage img {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .playButtonText {
+        font-size: 1.25rem;
+        padding: 0.25rem 0.5rem;
+      }
+
+      .playButton img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

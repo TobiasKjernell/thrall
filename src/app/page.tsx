@@ -1,10 +1,13 @@
-import Footer from '@/components/Footer';
+import HomeWelcomeSection from "@/components/HomeWelcomeSection";
+import AboutTheGame from "@/components/AboutTheGameSection";
+import Characters from "@/components/Characters";
 
 export default function Home() {
   return (
-    <main>
-      {}
-      <Footer />
-    </main>
+    <div>
+      <HomeWelcomeSection />
+      <AboutTheGame />
+      <Characters/>
+    </div>
   );
 }

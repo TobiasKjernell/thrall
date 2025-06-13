@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import './Footer.scss';
+import './footer.scss';
 
 const Footer = () => {
   const router = useRouter();
