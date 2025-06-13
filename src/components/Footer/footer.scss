@@ -1,18 +1,22 @@
 .footer {
-  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #111;
+  padding: 2rem;
   text-align: center;
   color: white;
-  width: 100%;
 
-  display: flex;             
-  justify-content: center;   
-  align-items: center;        
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .team-button {
   position: relative;
-  width: 200px;
-  height: 60px;
+  width: 300px;
+  height: 100px;
   border: none;
   cursor: pointer;
   overflow: hidden;
@@ -49,16 +53,22 @@
   height: 100%;
 }
 
-
+.button-text {
+  z-index: 1;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.5rem;
+  color: #8b0000;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+  pointer-events: none;
+}
 
 @media (max-width: 600px) {
   .team-button {
-    width: 150px;
-    height: 50px;
+    width: 180px;
+    height: 60px;
   }
 
   .button-text {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
-
