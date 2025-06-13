@@ -11,10 +11,6 @@ body {
 
 body {  
   background: url('/bkg-smoky.png') no-repeat center center/cover;
-  position: relative; 
-  margin: 0;
-  min-height: 100vh;
-  color: white;
 }
 
 body::before {
@@ -30,4 +26,3 @@ body::before {
   opacity: 0.5;              
   z-index: 1;               
 }
-
