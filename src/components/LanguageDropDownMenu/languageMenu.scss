@@ -2,6 +2,7 @@
     position: relative;
      width: max-content;
      cursor: pointer;
+     z-index: 2;
     &__english {
         display: flex;
         align-items: center;

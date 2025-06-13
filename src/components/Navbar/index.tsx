@@ -1,11 +1,11 @@
 "use client";
-import { navLinks } from "@/data/navbardata";
-import { useState } from "react";
-import Logo from "../Logo";
-import Link from "next/link";
-import LanguageDropdown from "../LanguageDropdown";
-import { List } from "@phosphor-icons/react";
 import "./navbar.scss";
+import React, { useState } from "react";
+import Link from "next/link";
+import Logo from "../Logo";
+import LanguageDropdown from "../LanguageDropDownMenu";
+import { List, X } from "@phosphor-icons/react/dist/ssr";
+import { navLinks } from "@/data/navbardata";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -25,22 +25,15 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-      <div className="navbar__flexContent">
-        <LanguageDropdown />
-        <div className="navbar__burger">
-          <button onClick={toggleMenu}>
-            <List size={60} weight="light" />
-          </button>
-        </div>
-      </div>
+      <LanguageDropdown />
+      <div className="navbar__burger">
+          {!openMenu ? <List onClick={toggleMenu} size={60} weight="light" /> : <X onClick={toggleMenu} size={60} weight="light" />  }
+      
       {openMenu && (
         <div className={`navbar__mobile ${openMenu ? "open" : ""}`}>
-          <Link href="/" onClick={() => setOpenMenu(false)}>
-            <Logo />
-          </Link>
-          {navLinks.map(({ name, path }) => (
-            <Link
-              key={path}
+          <Logo/>
+          {navLinks.map(({name, path}) =>(
+            <Link  key={path}
               href={path}
               className="navbar__links"
               onClick={() => setOpenMenu(false)}
@@ -50,6 +43,7 @@ const Navbar = () => {
           ))}
         </div>
       )}
+      </div>
     </nav>
   );
 };
