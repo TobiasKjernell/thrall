@@ -2,8 +2,6 @@
 @import '../../styles/mixins';
 
 .header {
-    // you can delet this backgound color and add what is required 
-    background-color: #161A20;
     font-family: $font_cinzel-decorative;
     &.home{
         padding-bottom: 700px;
