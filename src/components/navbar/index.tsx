@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <header className="header">
       <div className="top-bar">
-        {/* Burger Button */}
+        {}
         <div
           className="burger"
           onClick={() => setOpen(!open)}
@@ -40,7 +40,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Right-side Dropdown Menu */}
+      {}
       <nav
         className={`menu menu--right ${open ? 'open' : ''}`}
         ref={menuRef}

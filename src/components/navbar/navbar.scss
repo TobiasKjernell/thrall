@@ -16,7 +16,7 @@
     padding: 1rem;
   }
   
-  /* Burger Menu Icon */
+  
   .burger {
     cursor: pointer;
     display: flex;
@@ -45,7 +45,7 @@
     }
   }
   
-  /* Right-side Sliding Dropdown Menu */
+  
   .menu {
     position: fixed;
     top: 0;
@@ -59,7 +59,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
-    gap: 2rem; // ✅ Fixed typo here
+    gap: 2rem; 
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     z-index: 999;
@@ -72,7 +72,7 @@
     }
   
     &:hover {
-      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2); // No glow
+      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2); 
     }
   
     .skull {
