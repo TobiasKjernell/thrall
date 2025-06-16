@@ -14,9 +14,9 @@ const FooterV2 = () => {
                 </div>
                 <h3 className="footer__description--title">© 2024 Copyright. Thrall. All rights reserved.</h3>
                 <div className="footer__description--items">
-                    <a href="">Terms and conditions</a>
+                    <a href="https://itch.io/docs/legal/terms">Terms and conditions</a>
                     <span>|</span>
-                    <a href="">Privacy policy</a>
+                    <a href="https://itch.io/docs/legal/privacy-policy">Privacy policy</a>
                 </div>
             </div>
         </footer>
