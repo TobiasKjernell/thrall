@@ -8,125 +8,145 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+  font-family: 'Cinzel', serif;
 
   .overlay {
     width: 100%;
-    height: 100%;
+    padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .content {
+    max-width: 1000px;
+    width: 100%;
     text-align: center;
-    padding: 2rem;
-    max-width: 800px;
 
     h1 {
       font-family: 'Cinzel Decorative', serif;
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       margin-bottom: 2rem;
+      color: #fff;
+      font-weight: normal;
     }
 
-    p {
-      font-family: 'Cinzel', serif;
-      font-size: 1.25rem;
-      line-height: 2rem;
-      text-align: left;
-      margin-bottom: 2.5rem;
-      white-space: pre-line;
-    }
-
-    .characterImage {
-      margin-bottom: 2rem;
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-
-    .playButtonWrapper {
+    .gameContent {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 3rem;
 
-      .playButtonText {
-        font-family: 'Cinzel Decorative', serif;
-        font-size: 2.5rem;
-        color: #fff;
-        background: rgba(0, 0, 0, 0.363);
-        border: 1px solid #ee0707;
-        display: inline-flex;
-        align-items: center;
-        transition: background 0.3s, color 0.3s;
-        border-radius: 0.5rem;
+      .gameText,
+      .characterImage {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 400px;
       }
 
-      .playButton {
-        padding: 0;
-        background: none;
-        border: none;
-        cursor: pointer;
+      .gameText {
+        text-align: left;
+
+        p {
+          font-size: 1.1rem;
+          line-height: 1.8rem;
+          white-space: pre-line;
+        }
+      }
+
+      .characterImage {
+        align-items: center;
 
         img {
-          width: 30px;
-          height: 30px;
+          max-height: 500px;
+          width: auto;
           object-fit: contain;
         }
       }
+    }
 
-      /* Mobile button styles */
-      .mobileButton {
+    a.playBox {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      border: 3px solid #6b7bff;
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      max-width: 500px;
+      height: 400px;
+      margin: 0 auto;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(107, 123, 255, 0.2);
+      }
+
+      .playText {
         font-family: 'Cinzel Decorative', serif;
-        font-size: 2rem;
-        color: #fff;
-        background: rgba(0, 0, 0, 0.363);
-        border: 1px solid #ee0707;
-        border-radius: 0.5rem;
-        padding: 0.5rem 1.5rem;
-        cursor: pointer;
-        transition: background 0.3s, color 0.3s;
+        font-size: 1.8rem;
+        color: #d4d7ff;
+        text-decoration: none;
+      }
 
-        &:hover,
-        &:focus {
-          background: #ee0707;
-          color: #fff;
-        }
+      .playIcon {
+        font-size: 2rem;
+        color: #6b7bff;
+        text-decoration: none;
       }
     }
   }
 }
+
+// Responsive styles
 @media (max-width: 768px) {
   .aboutGame {
     .content {
-      padding: 1rem;
-
       h1 {
-        font-size: 1.25rem;
+        font-size: 1.75rem;
       }
 
-      p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-        text-align: left;
+      .gameContent {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        .gameText,
+        .characterImage {
+          width: 100%;
+          min-height: auto;
+        }
+
+        .gameText p {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+
+        .characterImage img {
+          width: 100%;
+          max-height: none;
+        }
       }
 
-      .characterImage img {
-        width: 100%;
-        max-width: 300px;
-      }
+      a.playBox {
+        flex-direction: column;
+        padding: 1rem;
+        height: 200px;
 
-      .playButtonText {
-        font-size: 1.25rem;
-        padding: 0.25rem 0.5rem;
-      }
+        .playText {
+          font-size: 1.5rem;
+        }
 
-      .playButton img {
-        width: 24px;
-        height: 24px;
+        .playIcon {
+          font-size: 1.5rem;
+        }
       }
     }
   }
