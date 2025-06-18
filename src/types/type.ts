@@ -8,3 +8,8 @@ export type Language = {
   label: string;
   flag: string;
 };
+export type Developer = {
+    name: string;
+    link?: string;
+    image?: string;
+}
