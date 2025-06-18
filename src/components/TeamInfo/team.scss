@@ -1,0 +1,133 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+.teamInfo {
+    font-family: $font_cinzel-decorative;
+  background-image: url("/bg-smok.png");
+  background-repeat: no-repeat;
+  background-size: cover;        
+  background-position: center;   
+  background-attachment: fixed;  
+  min-height: 100vh;             
+  width: 100%;
+  color: white;
+  padding-top: 20px;
+  margin-top: 150px;
+  position: relative; 
+    &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);  
+    z-index: 0;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1; 
+  }
+    &__title {
+        font-weight: 400;
+        font-size: clamp(2rem, 6vw, 96px);  
+        background-image: url("/bg-smok.png");
+        box-shadow: rgba(102, 102, 112, 0.25) 0px 50px 100px -20px, rgba(126, 124, 124, 0.3) 0px 30px 60px -30px, rgba(134, 136, 138, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 7px;
+        margin: 50px auto;
+        text-align: center;
+        padding: 0;
+        width: clamp(250px, 50vw, 500px);  
+        display: block;
+        color: #832e2e;         
+    }
+    &__containerInfo {
+       
+       @include flexColumn; 
+    }
+    &__role {
+       font-size:$indent__m;
+       font-weight: 200;
+       margin-top: 100px;
+       margin-bottom: 20px;
+    }
+    &__ContainerInfoItems {
+      @include flexWrap;
+        gap: 16px;
+        margin: auto;
+    }
+    &__infoContainerflex {
+        background-color: rgb(18, 18, 17);
+        box-shadow: 0 10px 12px 5px rgba(129, 155, 169, 0.4);
+        display: flex;
+        border-radius: 20px;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+        margin: 20px;
+         @include tablet {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            margin: 0;
+            padding: 0;
+        }        
+    }
+    &__imageContainer {
+        width: 300px;
+        @include tablet {
+            width: auto;
+            margin:0 0  10px 0;
+            padding: 0;
+         }
+        img{
+            width: 100%;
+            border-radius: 20px;
+            height: 100%;
+            object-fit: cover;
+            margin: 10px;
+            padding: 5px;
+            @include tablet {
+            margin: 0;
+            padding: 2px;
+         }
+        }
+    }
+    &__content {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 320px;
+        padding-top: 20px;
+        margin: 10px;
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: auto;
+        }
+        .teamInfo__icon {
+            color: #0077b5; 
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 118, 181, 0.514); 
+            border-radius: 20%;  
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+     
+        &:hover {
+            transform: scale(1.2);
+            color: #005582;
+            box-shadow: 0 6px 18px rgba(0, 119, 181, 0.6);
+        }
+    }
+    }
+    &__contentTitle {
+        font-weight: normal;
+        padding-bottom: 10px;
+    }
+    &__contentName {
+         font-weight: normal;
+        padding-bottom: 100px;
+        @include tablet {
+            padding: 0;
+        }
+    }
+ 
+}

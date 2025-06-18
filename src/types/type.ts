@@ -3,9 +3,15 @@ export type NavLink = {
   path: string;
 };
 
+export type TeamGroup = {
+  role: string;
+  members: Team[];
+
+}
+
 export type Team = {
   name: string;
   image: string;
   link: string;
-  icon: string;
+  title?:string;
 };
