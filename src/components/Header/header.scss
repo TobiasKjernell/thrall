@@ -19,7 +19,7 @@
              font-size: clamp(48px, 10vw, 128px);  
              font-weight: 400;
              margin: 0;
-             @include responsive-media-m  {
+             @include responsive-media-m {
                 margin-top: 0;
                 padding-top: 0;
            }
