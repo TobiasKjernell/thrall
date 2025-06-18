@@ -8,6 +8,8 @@
     font-weight: 400;
     font-size: 32px;
     color: #CCC5C5;
+    //background-color: black;
+    //position: absolute;
 
     @include tablet {
         display: flex;
@@ -31,7 +33,14 @@
         &:hover {
             color: white;
         }
+    } 
+    &__download {
+        color: red;
+        &:hover {
+            color: darkred; 
+        }
     }
+    
     &__burger {
         display: none;
         z-index: 1;
@@ -40,10 +49,11 @@
         }
 
         svg {
-            cursor: pointer;
+            cursor: pointer;   
         }
     }
-     &__mobile {
+
+    &__mobile {
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -4,7 +4,7 @@ import Characters from "@/components/Characters";
 
 export default function Home() {
   return (
-    <div>
+    <div className="topPadding">
       <HomeWelcomeSection />
       <AboutTheGame />
       <Characters/>
