@@ -17,11 +17,6 @@
     @include mobile {
         margin: 32px 12px;
     }
-    &__logo {
-        @include tablet {
-            display: none;
-        }
-    }
     &__container {
         display: flex;
         justify-content: space-between;
