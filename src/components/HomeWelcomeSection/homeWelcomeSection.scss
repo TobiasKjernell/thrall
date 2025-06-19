@@ -6,7 +6,7 @@
     background-color: #161A20;
     font-family: $font_cinzel-decorative;
     margin-top: -240px;
-    background-image: url("/heropic-edit.png");
+    background-image: url("/homeBg.png");
     //background-image: linear-gradient(rgba(221, 214, 214, 0.171)), url("/heropic-edit.png"); 
     background-size: cover;
     background-position: center;
@@ -20,6 +20,7 @@
     }
 
     &__container {
+        text-shadow: 0 0 20px #000000;
         text-align: center;
         display: flex;
         flex-direction: column;
