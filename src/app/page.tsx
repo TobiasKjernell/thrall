@@ -1,6 +1,7 @@
 import Characters from "@/components/Characters";
-import AboutTheGame from "@/components/AboutTheGameSection";
 import StorylineSection from "@/components/StorylineSection";
+import ConceptArea from "@/components/ConceptArea";
+import AboutTheGame from "@/components/AboutTheGameSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <AboutTheGame />
       <Characters />
       <StorylineSection />
+      <ConceptArea />
     </div>
   );
 }
