@@ -6,10 +6,9 @@
     
     @include responsive-media-s {
         padding: 32px 32px;
-
     }
 
-    h1 {
+    h2 {
         font-size: 4rem;
         color: #8C1D1DCC;
         -webkit-text-stroke: 1px #DE8B8B;
@@ -18,8 +17,9 @@
 
     &-itemsContainer {
         margin-top: 32px;
-        justify-items: center;
         gap: 32px;
+        max-width: auto;
+        text-align: center;
 
         @include responsive-media-m {
             display: flex;
@@ -27,25 +27,24 @@
         }
 
         &__items {
-            margin-top: 2rem;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-
+    
+            
             p {
                 color: #D5D0CA;
                 font-size: 24px;
-                text-align: center;
-                width: 50%;
+                text-transform: uppercase;
+                max-width: 900px;
 
                 @include responsive-media-m {
                     font-size: 20px;
                 }
 
                 @include responsive-media-s {
-                    font-size: 18px;
+                    font-size: 16px;
                 }
 
             }
