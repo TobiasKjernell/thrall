@@ -8,6 +8,8 @@
     font-weight: 400;
     font-size: 32px;
     color: #CCC5C5;
+    //background-color: black;
+    //position: absolute;
 
     @include tablet {
         display: flex;
@@ -15,11 +17,6 @@
     }
     @include mobile {
         margin: 32px 12px;
-    }
-    &__logo {
-        @include tablet {
-            display: none;
-        }
     }
     &__container {
         display: flex;
@@ -36,31 +33,39 @@
         &:hover {
             color: white;
         }
+    } 
+    &__download {
+        color: red;
+        &:hover {
+            color: darkred; 
+        }
     }
+    
     &__burger {
         display: none;
         z-index: 1;
         @include tablet {
-            display: block;
+            display: flex;
         }
 
         svg {
-            cursor: pointer;
+            cursor: pointer;   
         }
     }
-     &__mobile {
+
+    &__mobile {
         display: flex;
         flex-direction: column;
         align-items: center;
         transform: translateX(100%);
         transition: transform 0.5s ease-in-out;
         gap: 20px;
-        padding: 20px;
+        padding: 100px 20px 20px;
         position: absolute;   
         top: 0;           
         right: 0;
         left: 0;
-        background-color: #6F7276E0;
+        background-color: #000000b1;
         z-index: -1;
         &.open {
             transform: translateX(0);

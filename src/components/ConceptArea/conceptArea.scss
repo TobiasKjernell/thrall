@@ -1,6 +1,6 @@
 .concept {
     font-family: var(--font-CD);
-    background-color: #121010;
+    background-color: #000;
     text-align: center;
     padding:  2rem 0;
     position: relative;
@@ -30,7 +30,7 @@
             width: 100%;
             height: auto;
         }
-
+        
         @media screen and (max-width:900px) {
              grid-template-columns: 1fr;
         }
