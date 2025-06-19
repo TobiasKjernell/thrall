@@ -7,7 +7,7 @@ const ConceptArea = () => {
             {/* <p className="concept__text">For (16+) players who enjoy emergent mechanics and dynamic combat</p> */}
             <div className="concept__picture-grid">
                 {Array.from({ length: 25 }).map((_, index) =>  
-                <img className='concept__picture-grid__item' src={`/CleanScreenshots/${index}.png`} alt="yep" width={400} height={200} />)}
+                <img key={index} className='concept__picture-grid__item' src={`/CleanScreenshots/${index}.png`} alt="yep" width={400} height={200} />)}
             </div>
         </section>
     )
