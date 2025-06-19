@@ -45,7 +45,7 @@
         display: none;
         z-index: 1;
         @include tablet {
-            display: block;
+            display: flex;
         }
 
         svg {
@@ -60,7 +60,7 @@
         transform: translateX(100%);
         transition: transform 0.5s ease-in-out;
         gap: 20px;
-        padding: 20px;
+        padding: 80px 20px 20px;
         position: absolute;   
         top: 0;           
         right: 0;

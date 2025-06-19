@@ -13,7 +13,6 @@ body{
   /*background:linear-gradient(rgba(53, 53, 53, 0.5), rgba(66, 66, 66, 0.5)), url('/heropic-edit.png');*/
   background-size: cover;       
   background-position: top;
-  min-height: 100vh;
   background-color: black;
 }
 
