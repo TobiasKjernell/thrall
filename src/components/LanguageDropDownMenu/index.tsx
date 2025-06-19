@@ -1,4 +1,4 @@
-'use client'
+/*'use client'
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import './languageMenu.scss'
@@ -98,4 +98,4 @@ const toggleDropdown = () => {
   );
 };
 
-export default LanguageDropdown;
+export default LanguageDropdown;*/

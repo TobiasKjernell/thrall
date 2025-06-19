@@ -1,35 +1,77 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .home {
-  
+    display: flex;
     background-color: #161A20;
-    background-image: linear-gradient(rgba(221, 214, 214, 0.171)), url("/heropic-edit.png"); 
+    //background-image: linear-gradient(rgba(221, 214, 214, 0.171)), url("/heropic-edit.png"); 
+    background-image: url("/homeBg.png");
     background-size: cover;
     background-position: center;
-    padding-top: 250px;
-    padding-bottom: 700px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    min-height: 50rem;
+
+    @include responsive-media-m {
+        min-height: 30rem;
+    }
+
     &__container {
-       
+        text-shadow: 0 0 20px #000000;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         h1 {            
             color: #8C1D1D;
-            font-size: clamp(48px, 10vw, 128px);  
+            font-size: clamp(60px, 15vw, 128px);  
             font-weight: 400;
-            margin: 0;
         }
         h2 {
             font-size: clamp(12px, 4vw, 32px); 
             font-weight: 400;
-            color: #FFFFFF;
-            margin-top: 1rem;
-        }        
+            //color: #FFFFFF;
+            color: #a4a3a3;
+            //font-size: 2rem;
+        }
+        h3 {
+            font-size: clamp(12px, 4vw, 32px); 
+            font-weight: 700;
+            color: #f1e8e8;
+            gap: 1.5rem;
+            //font-size: 5rem;
+            justify-content: center;
+            text-align: center;
+            margin: 4rem 2rem 0;
+        }    
     }
-      @media (max-width: 800px) {
+     
+    @media (min-width: 768px) {
         padding: 0;
-        height: 400px;
-  }
-    
-}
+        justify-items: center;
+        align-items: center;
+        h3 {
+           font-size: 1.4rem; 
+        }
+    }  
+
+        @media (min-width: 1024px) {
+        padding: 0;
+        justify-items: center;
+        align-items: center;
+        h3 {
+          font-size: 1.5rem;
+        }
+    } 
+       
+        @media (max-width: 360px) {
+        padding: 0;
+        justify-items: center;
+        align-items: center;
+        h3 {
+           font-size: 1rem; 
+        }
+    } 
+}  
+

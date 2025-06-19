@@ -4,9 +4,10 @@ import Characters from "@/components/Characters";
 import StorylineSection from "@/components/StorylineSection";
 import ConceptArea from "@/components/ConceptArea";
 
+
 export default function Home() {
   return (
-    <div>
+    <div className="topPadding">
       <HomeWelcomeSection />
       <AboutTheGame />
       <Characters />
