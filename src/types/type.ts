@@ -13,3 +13,15 @@ export type Developer = {
     link?: string;
     image?: string;
 }
+export type TeamGroup = {
+  role: string;
+  members: Team[];
+
+}
+
+export type Team = {
+  name: string;
+  image: string;
+  link: string;
+  title?:string;
+};
