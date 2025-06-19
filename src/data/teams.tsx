@@ -1,6 +1,5 @@
 import { TeamGroup } from "@/types/type";
 
-
 export const allTeams: TeamGroup[] = [
   {
     role: "Game Designer",
