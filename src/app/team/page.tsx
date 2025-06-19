@@ -1,6 +1,10 @@
+import TeamInfo from "@/components/TeamInfo"
+
 const Team = () => {
     return(
-        <>Team Page</>
+        <>
+        <TeamInfo />
+        </>
     )
 }
 
