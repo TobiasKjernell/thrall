@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Navbar from "../Navbar";
-
+import './header.scss'
 const Header = () => {
     return(
-        <header>
+        <header className="header">
             <Navbar />
         </header>
     )
