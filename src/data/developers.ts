@@ -27,7 +27,7 @@ const people: Developer[] = [
     image: ""
   },
   {
-    name: "PRIYESH ILLAM",
+    name: "Priyesh Illam",
     link: "",
     image: ""
   },
