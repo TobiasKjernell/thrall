@@ -9,6 +9,8 @@
     font-weight: 400;
     font-size: 32px;
     color: #CCC5C5;
+    //background-color: black;
+    //position: absolute;
 
     @include tablet {
         display: flex;
@@ -32,24 +34,32 @@
         &:hover {
             color: white;
         }
+    } 
+    &__download {
+        color: red;
+        &:hover {
+            color: darkred; 
+        }
     }
+    
     &__burger {
         display: none;
         z-index: 1;
         @include tablet {
-            display: block;
+            display: flex;
         }
 
         svg {
-            cursor: pointer;
+            cursor: pointer;   
         }
     }
-     &__mobile {
+
+    &__mobile {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        padding: 20px;
+        padding: 80px 20px 20px;
         position: absolute;   
         top: 0;           
         right: 0;

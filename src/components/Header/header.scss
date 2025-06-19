@@ -3,6 +3,21 @@
 
 .header {
     font-family: $font_cinzel-decorative;
+    position: fixed;
+    height: 80px;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+        justify-content: right;
+    }
+    @include mobile {
+        justify-content: right;
+    }
+
     &.home{
         padding-bottom: 700px;
         display: flex;
@@ -31,5 +46,4 @@
             margin-top: 1rem;
         }        
     }
- 
 }
