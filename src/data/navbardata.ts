@@ -1,8 +1,8 @@
 import { NavLink } from "@/types/type";
 
 export const navLinks: NavLink[] = [
-  { name: "Thrall", path: "/" },
+  { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Play", path: "/play" },
-  {name: "Team", path: "/team"}
+  { name: "Team", path: "/team" },
+  { name: "Download", path: "https://futuregames.itch.io/thrall" }
 ];
