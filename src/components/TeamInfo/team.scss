@@ -129,5 +129,28 @@
             padding: 0;
         }
     }
+
+    &__containerDev {
+         margin-top: 100px;
+    }
+    &__devTitle{
+        text-align: center;
+        color: white;
+    }  
+    &__developers {
+         
+         h2 {
+            color: white;
+         }
+         
+    }
+    &__developersInfo {
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+   
  
 }

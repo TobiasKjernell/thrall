@@ -1,6 +1,6 @@
 import { Developer } from "@/types/type";
 
-const people: Developer[] = [
+export const people: Developer[] = [
   {
     name: "Ankita Singh",
     link: "https://www.linkedin.com/in/ankita-singh-1a8236185",

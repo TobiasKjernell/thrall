@@ -1,7 +1,8 @@
 "use client";
 import { allTeams } from "@/data/teams";
-import { TeamGroup } from "@/types/type";
+import { TeamGroup, Developer } from "@/types/type";
 import { useEffect } from "react";
+import { people } from "@/data/developers";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./team.scss";
@@ -20,7 +21,7 @@ const TeamInfo = () => {
         <h1 className="teamInfo__title">The team</h1>
         {allTeams.map((team: TeamGroup, index: number) => (
           <div key={index} className="teamInfo__containerInfo">
-             <h2 className="teamInfo__role">{team.role}</h2>
+            <h2 className="teamInfo__role">{team.role}</h2>
             <div className="teamInfo__ContainerInfoItems">
               {team.members.map((member, index) => (
                 <div
@@ -43,6 +44,19 @@ const TeamInfo = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="teamInfo__containerDev">
+        <h2 className="teamInfo__devTitle">Developers</h2>
+        <div className="teamInfo__developers"> 
+        {people.map((item: Developer, index: number) => (
+          <div key={index} className="teamInfo__developersInfo">
+            <h2 className="teamInfo__deveName">{item.name}</h2>
+            <a href={item.link} target="_blank">
+              <LinkedinLogo size={47} className="teamInfo__icon" />
+            </a>
+          </div>
+        ))}
+        </div>
       </div>
     </div>
   );
