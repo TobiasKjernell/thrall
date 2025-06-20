@@ -49,7 +49,8 @@ export const allTeams: TeamGroup[] = [
       { name: "Tobias Kjernell", image: "profil-picture.jpg", link: "", title: ""},
       { name: "Souad Taki", image: "souadtTaki.jpeg", link: "https://www.linkedin.com/in/souad-rondelet-b18873184/", title: ""},
       { name: "Yevhenii Kapustian", image: "profil-picture.jpg", link: "https://www.linkedin.com/in/yevhenii-kapustian-ab85a8279?trk=contact-info", title: ""},
-      { name: "Priyesh Illam", image: "profil-picture.jpg", link: "", title: "Project Manager"},
+      { name: "Priyesh Illam", image: "profil-picture.jpg", link: "", title: ""},
+      { name: "Megha Albin", image: "profil-picture.jpg", link: "", title: ""},
     ],
   },
 ];
