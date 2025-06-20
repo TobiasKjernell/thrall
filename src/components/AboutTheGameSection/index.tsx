@@ -6,8 +6,8 @@ import './AboutTheGame.scss';
 
 export default function AboutTheGame() {
   return (
-    <section className="aboutGame">
-      <div className="overlay">
+    <section id="about" className="aboutGame">
+      <div  className="overlay">
         <div className="content">
           <h1>ABOUT THE GAME</h1>
           <div className="gameContent">

@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__container">
         {navLinks.map(({ name, path }) => (
-          <Link key={path} href={path} target={name.includes('Download') ? '_blank' : undefined}
+          <Link key={path} href={name.includes("About") ? '/#about' : path} target={name.includes('Download') ? '_blank' : undefined}
           className={`navbar__links ${name.includes('Download') ? "navbar__download" : ""}`}
           >
           {name}
@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className={`navbar__mobile ${openMenu ? "open" : ""}`}>
           {navLinks.map(({name, path}) =>(
             <Link  key={path}
-              href={path}
+              href={name.includes("About") ? '/#about' : path}
               target={name.includes("Download") ? '_blank' : undefined}
               className={`navbar__links ${name.includes("Download") ? "navbar__download" : ""}`}
               onClick={() => setOpenMenu(false)}>
