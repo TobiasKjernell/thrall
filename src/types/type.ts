@@ -21,7 +21,7 @@ export type TeamGroup = {
 
 export type Team = {
   name: string;
-  image: string;
+  image?: string;
   link: string;
   title?:string;
 };
