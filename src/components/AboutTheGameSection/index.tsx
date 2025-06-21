@@ -9,7 +9,7 @@ export default function AboutTheGame() {
     <section id="about" className="aboutGame">
       <div  className="overlay">
         <div className="content">
-          <h1>ABOUT THE GAME</h1>
+          <h2>ABOUT THE GAME</h2>
           <div className="gameContent">
             <div className="gameText">
               <p>
