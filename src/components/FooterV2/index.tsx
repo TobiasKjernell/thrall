@@ -17,9 +17,17 @@ const FooterV2 = () => {
                 </div>
                 <h3 className="footer__description--title">© {currentYear} Copyright. Thrall. All rights reserved.</h3>
                 <div className="footer__description--items">
-                    <a href="https://itch.io/docs/legal/terms">Terms and conditions</a>
+                    <a href="https://itch.io/docs/legal/terms" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                            Terms and conditions
+                    </a>
                     <span>|</span>
-                    <a href="https://itch.io/docs/legal/privacy-policy">Privacy policy</a>
+                    <a href="https://itch.io/docs/legal/privacy-policy"
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                            Privacy policy
+                    </a>
                 </div>
             </div>
         </footer>
