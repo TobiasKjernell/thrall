@@ -20,7 +20,7 @@ const TeamInfo = () => {
         <h1 className="teamInfo__title">The team</h1>
         {allTeams.map((team: TeamGroup, index: number) => (
           <div key={index} className="teamInfo__containerInfo">
-             <h2 className="teamInfo__role">{team.role}</h2>
+            <h2 className="teamInfo__role">{team.role}</h2>
             <div className="teamInfo__ContainerInfoItems">
               {team.members.map((member, index) => (
                 <div
@@ -34,9 +34,15 @@ const TeamInfo = () => {
                   <div className="teamInfo__content">
                     <h3 className="teamInfo__contentTitle">{member.title}</h3>
                     <h3 className="teamInfo__contentName">{member.name}</h3>
-                    <a href={member.link} target="_blank">
-                      <LinkedinLogo size={47} className="teamInfo__icon" />
-                    </a>
+                    {member.link && (
+                      <a
+                        href={member.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <LinkedinLogo size={47} className="teamInfo__icon" />
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}

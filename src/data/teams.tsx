@@ -43,14 +43,15 @@ export const allTeams: TeamGroup[] = [
     ],
   },
     {
-    role: "Developers",
+     role: "Developers",
     members: [
       { name: "Ankita Singh", image: "profile-picture-women.jpg", link: "https://www.linkedin.com/in/ankita-singh-1a8236185", title: ""},
-      { name: "Tobias Kjernell", image: "profil-picture.jpg", link: "", title: ""},
+      { name: "Tobias Kjernell", image: "tobbe.jpg", link: "https://www.linkedin.com/in/tobias-kjernell-4b50b113a/", title: ""},
       { name: "Souad Taki", image: "souadtTaki.jpeg", link: "https://www.linkedin.com/in/souad-rondelet-b18873184/", title: ""},
       { name: "Yevhenii Kapustian", image: "profil-picture.jpg", link: "https://www.linkedin.com/in/yevhenii-kapustian-ab85a8279?trk=contact-info", title: ""},
       { name: "Priyesh Illam", image: "profil-picture.jpg", link: "", title: ""},
       { name: "Megha Albin", image: "profil-picture.jpg", link: "", title: ""},
     ],
   },
+
 ];
