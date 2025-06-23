@@ -12,7 +12,7 @@ const FooterV2 = () => {
                     <p><strong>Genres:</strong> Combat · Light Strategy · Narrative</p>
                     <p><strong>Target Experience:</strong> Emergent gameplay and creative player-facing tools/mechanics</p>
                 </div>
-                <h3 className="footer__description--title">© 2024 Copyright. Thrall. All rights reserved.</h3>
+                <h3 className="footer__description--title">© 2025 Copyright. Thrall. All rights reserved.</h3>
                 <div className="footer__description--items">
                     <a href="https://itch.io/docs/legal/terms">Terms and conditions</a>
                     <span>|</span>
