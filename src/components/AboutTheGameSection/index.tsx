@@ -36,10 +36,9 @@ export default function AboutTheGame() {
             </div>
           </div>
 
-          <a href="#" className="playBox">
-            <span className="playText">PLAY THE STORY</span>
-            <span className="playIcon">▶</span>
-          </a>
+          <div className="playBox">
+            <span className="playText">Coming Soon</span>
+          </div>
         </div>
       </div>
     </section>

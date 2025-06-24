@@ -68,7 +68,7 @@
       }
     }
 
-    a.playBox {
+    div.playBox {
       text-decoration: none;
       color: inherit;
       display: flex;
@@ -79,15 +79,10 @@
       padding: 1.5rem 2rem;
       border-radius: 10px;
       background: rgba(0, 0, 0, 0.5);
-      cursor: pointer;
       max-width: 500px;
       height: 400px;
       margin: 0 auto;
       transition: all 0.3s ease;
-
-      &:hover {
-        background: rgba(107, 123, 255, 0.2);
-      }
 
       .playText {
         font-family: 'Cinzel Decorative', serif;
