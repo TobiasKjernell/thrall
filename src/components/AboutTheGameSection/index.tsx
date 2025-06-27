@@ -37,7 +37,13 @@ export default function AboutTheGame() {
           </div>
 
           <div className="playBox">
-            <span className="playText">Coming Soon</span>
+          <iframe
+                className='playBox__trailer'
+                src="https://www.youtube.com/embed/cQyiZSHRfBM"
+                frameBorder="0"
+                title="Trailer"
+                aria-hidden="true"
+          />
           </div>
         </div>
       </div>
